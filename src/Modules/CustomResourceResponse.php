@@ -2,16 +2,13 @@
 
 namespace Modules;
 
-use Illuminate\Support\Collection;
 use Illuminate\Http\Resources\Json\ResourceResponse;
+use Illuminate\Support\Collection;
 
 class CustomResourceResponse extends ResourceResponse
 {
-
     /**
-     * @param array|Collection|\Illuminate\Database\Eloquent\Collection $data
-     * @param $with
-     * @param $additionalData
+     * @param  array|Collection|\Illuminate\Database\Eloquent\Collection  $data
      * @return array
      */
     protected function wrap($data, $with = [], $additionalData = [])

@@ -2,18 +2,17 @@
 
 namespace App\Http\Controllers\App;
 
-use Modules\Settings\Enums\SettingType;
 use App\Http\Requests\SettingStoreRequest;
-use Modules\Settings\Resources\SettingResource;
 use Modules\Settings\DataTransferObjects\SettingDto;
 use Modules\Settings\Interfaces\SettingServiceInterface;
+use Modules\Settings\Resources\SettingResource;
 
 class SettingController
 {
-
     public function __construct(
         protected SettingServiceInterface $service,
-    ) {}
+    ) {
+    }
 
     public function store(SettingStoreRequest $request): SettingResource
     {
@@ -24,5 +23,4 @@ class SettingController
 
         return SettingResource::make($setting);
     }
-
 }

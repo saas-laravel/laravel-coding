@@ -3,9 +3,9 @@
 namespace Database\Factories;
 
 use App\Models\User;
-use Modules\Settings\Models\Setting;
-use Modules\Settings\Enums\SettingType;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Modules\Settings\Enums\SettingType;
+use Modules\Settings\Models\Setting;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<Setting>
@@ -27,5 +27,4 @@ class SettingFactory extends Factory
             'type' => fake()->randomElement(SettingType::cases()),
         ];
     }
-
 }

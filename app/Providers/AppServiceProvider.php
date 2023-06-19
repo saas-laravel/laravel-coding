@@ -4,8 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
-use Modules\Settings\Services\SettingService;
 use Modules\Settings\Interfaces\SettingServiceInterface;
+use Modules\Settings\Services\SettingService;
 
 class AppServiceProvider extends ServiceProvider
 {

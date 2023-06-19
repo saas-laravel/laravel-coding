@@ -2,8 +2,8 @@
 
 namespace Modules\Settings\Resources;
 
-use Modules\CustomResource;
 use Illuminate\Http\Request;
+use Modules\CustomResource;
 use Modules\Settings\Models\Setting;
 
 /**

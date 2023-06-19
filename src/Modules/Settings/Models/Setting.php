@@ -2,10 +2,10 @@
 
 namespace Modules\Settings\Models;
 
-use Modules\CustomModel;
 use Database\Factories\SettingFactory;
-use Modules\Settings\Builders\SettingQueryBuilder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Modules\CustomModel;
+use Modules\Settings\Builders\SettingQueryBuilder;
 
 /**
  * @mixin IdeHelperSetting

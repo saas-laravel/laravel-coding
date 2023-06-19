@@ -3,15 +3,13 @@
 namespace Modules\Settings\Services;
 
 use App\Models\User;
-use Modules\Settings\Models\Setting;
-use Modules\Settings\Enums\SettingType;
-use Modules\Settings\Exceptions\SettingException;
 use Modules\Settings\DataTransferObjects\SettingDto;
+use Modules\Settings\Exceptions\SettingException;
 use Modules\Settings\Interfaces\SettingServiceInterface;
+use Modules\Settings\Models\Setting;
 
 class SettingService implements SettingServiceInterface
 {
-
     public function store(User $user, SettingDto $dto): Setting
     {
         if (! $dto->value) {
@@ -28,10 +26,9 @@ class SettingService implements SettingServiceInterface
     }
 
     /**
-     * @param User $user
-     * @param SettingDto[] $settings
-     *
+     * @param  SettingDto[]  $settings
      * @return Setting[]
+     *
      * @throws SettingException
      */
     public function storeMany(User $user, array $settings): array

@@ -2,9 +2,8 @@
 
 namespace App\Exceptions;
 
-use Modules\CustomException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
-use Throwable;
+use Modules\CustomException;
 
 class Handler extends ExceptionHandler
 {

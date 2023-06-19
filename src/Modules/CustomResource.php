@@ -2,13 +2,12 @@
 
 namespace Modules;
 
-use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 abstract class CustomResource extends JsonResource
 {
-
     public function toResponse($request): JsonResponse
     {
         return (new CustomResourceResponse($this))->toResponse($request);
@@ -23,6 +22,5 @@ abstract class CustomResource extends JsonResource
         return $this->data($request);
     }
 
-    abstract function data(Request $request): array;
-
+    abstract public function data(Request $request): array;
 }
