@@ -4,6 +4,11 @@
          bootstrap="vendor/autoload.php"
          colors="true"
 >
+    <extensions>
+        <bootstrap class="Ergebnis\PHPUnit\SlowTestDetector\Extension">
+            <parameter name="maximum-duration" value="2000"/>
+        </bootstrap>
+    </extensions>
     <testsuites>
         <testsuite name="Unit">
             <directory suffix="Test.php">./tests/Unit</directory>
