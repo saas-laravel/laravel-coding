@@ -3,10 +3,10 @@
 namespace Tests;
 
 use App\Models\User;
-use Modules\Teams\Models\Team;
-use Modules\Auth\Enums\RoleType;
 use Illuminate\Foundation\Testing\LazilyRefreshDatabase;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Modules\Auth\Enums\RoleType;
+use Modules\Teams\Models\Team;
 
 abstract class FeatureTestCase extends BaseTestCase
 {
@@ -14,6 +14,7 @@ abstract class FeatureTestCase extends BaseTestCase
     use LazilyRefreshDatabase;
 
     protected User $currentUser;
+
     protected Team $currentTeam;
 
     protected function signIn(User $user = null, bool $api = false): self

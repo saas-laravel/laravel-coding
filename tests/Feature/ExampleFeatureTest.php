@@ -2,8 +2,8 @@
 
 namespace Tests\Feature;
 
-use Tests\FeatureTestCase;
 use Modules\Auth\Enums\RoleType;
+use Tests\FeatureTestCase;
 
 class ExampleFeatureTest extends FeatureTestCase
 {
@@ -11,6 +11,7 @@ class ExampleFeatureTest extends FeatureTestCase
      * Whenever we post to `/users`,
      *
      * @test
+     *
      * @dataProvider validRolesToCreateUserProvider
      */
     public function user_can_only_be_created_by_valid_role(RoleType $role): void
@@ -32,11 +33,11 @@ class ExampleFeatureTest extends FeatureTestCase
         ]);
     }
 
-
     /**
      * Whenever we post to `/users` with invalid role, we should see 403
      *
      * @test
+     *
      * @dataProvider invalidRolesThatCannotCreateUserProvider
      */
     public function user_cannot_be_created_by_invalid_role(RoleType $role): void

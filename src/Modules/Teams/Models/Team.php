@@ -2,11 +2,11 @@
 
 namespace Modules\Teams\Models;
 
-use Modules\CustomModel;
 use Database\Factories\TeamFactory;
-use Modules\Teams\Builders\TeamQueryBuilder;
-use Modules\Settings\Models\IdeHelperSetting;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Modules\CustomModel;
+use Modules\Settings\Models\IdeHelperSetting;
+use Modules\Teams\Builders\TeamQueryBuilder;
 
 /**
  * @mixin IdeHelperSetting

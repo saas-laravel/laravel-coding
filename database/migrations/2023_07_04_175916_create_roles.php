@@ -1,12 +1,11 @@
 <?php
 
+use Illuminate\Database\Migrations\Migration;
 use Modules\Auth\Enums\RoleType;
 use Spatie\Permission\Models\Role;
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration {
+return new class extends Migration
+{
     protected array $roles = [
         RoleType::Admin,
         RoleType::TeamOwner,
